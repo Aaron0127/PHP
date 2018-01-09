@@ -1,0 +1,15 @@
+body{
+	background-color:#2f4050;
+}
+p{
+	font-size:150%;
+}
+#divElement{
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 300px;
+    height: 100px;
+}

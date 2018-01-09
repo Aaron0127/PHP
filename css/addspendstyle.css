@@ -1,0 +1,16 @@
+body{
+	background-color:#2f4050;
+}
+.col-sm-10{
+	background-color:#ffffff;
+}
+li{
+	margin: 15px 0;
+}
+
+#Footer{
+	padding:10px;
+	boarder-top:1px solid black;
+	color:#EEEEEE;
+	text-align:center;
+}

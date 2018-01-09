@@ -1,0 +1,12 @@
+body{
+	background-color:#2f4050;
+}
+.col-sm-10{
+	background-color:#ffffff;
+}
+#Footer{
+	padding:10px;
+	boarder-top:1px solid black;
+	color:#EEEEEE;
+	text-align:center;
+}
