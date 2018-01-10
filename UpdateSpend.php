@@ -29,7 +29,7 @@
 		echo $PaymentName;
 		echo $Update_Record;
 		if(!empty($PaymentName)){		
-		$Update_Query="UPDATE monthlypayment SET paymentname='$PaymentName',datetime='DateTime',payment='$Payment',description='$Description' 
+		$Update_Query="UPDATE monthlypayment SET paymentname='$PaymentName',datetime='$DateTime',payment='$Payment',description='$Description' 
 		WHERE id='$ID'";
 		$Excute=mysql_query($Update_Query);
 		if($Excute){
