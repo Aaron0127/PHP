@@ -1,4 +1,5 @@
 <?php require_once("Include/DB.php");?>
+<?php require_once("Include/Session.php");?>
 
 <!DOCTYPE>
 
@@ -25,14 +26,19 @@
 					</ul>
 				</div><!--End of Side Area -->
 				<div class="col-sm-10">
-					<h1 class="text-primary">View Monthly Record</h1>
+					<h1 class="text-primary">View Monthly Record
+						<button class="btn btn-danger pull-right"><a href="DeleteAll.php">Delete All Data</a></button>
+					</h1>
+					<?php echo SuccessMessage();?>
 					<div class="table-responsive">
 						<table class="table table-striped table-hover">
 							<tr>
 								<th>Payment Name</th>
 								<th>Date & Time</th>
 								<th>Description</th>
-								<th>Payment</th>								
+								<th>Payment</th>
+								<th>Detele</th>
+								<th>Update</th>
 							</tr>
 							
 							<?php 
@@ -41,6 +47,7 @@
 								$excute=mysql_query($viewQuery);
 								$Total=0;
 								while($dataRaw=mysql_fetch_array($excute)){
+									$Id=$dataRaw['id'];
 									$PaymentName=$dataRaw['paymentname'];
 									$DateTime=$dataRaw['datetime'];
 									$Payment=$dataRaw['payment'];
@@ -53,7 +60,8 @@
 								<td><?php echo $DateTime;?></td>
 								<td><?php echo $Description;?></td>
 								<td><?php echo "$".$Payment;?></td>
-								
+								<td><a class="bootstrap-link" href="Delete.php?Delete=<?php echo $Id; ?>">Delete</a></td>
+								<td><a class="bootstrap-link" href="UpdateSpend.php?Update=<?php echo $Id; ?>">Update</a></td>
 							</tr>
 							<?php } ?>
 							<tr>
